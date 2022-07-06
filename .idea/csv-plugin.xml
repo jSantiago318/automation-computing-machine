@@ -3,28 +3,35 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/04-TRACCAR.csv">
+        <entry key="/OBA_DATABASE/2022-07/05-PREDICTIONS.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/2022-07-01-TRACCAR.csv">
+        <entry key="/OBA_DATABASE/2022-07/05-TRACCAR.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/2022-07-04-TRACCAR.csv">
+        <entry key="/OBA_DATABASE/2022-07/06-PREDICTIONS.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/OBA_DATABASE/2022-07/04/04-TRACCAR.csv">
+        <entry key="/OBA_DATABASE/2022-07/06-TRACCAR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/OBA_DATABASE/2022-07/06-TRIPS.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
