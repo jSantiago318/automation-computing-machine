@@ -5,6 +5,7 @@ import asyncio
 from datetime import date, datetime
 from time import gmtime, strftime, sleep
 import pandas as pd
+from flask import Flask 
 
 
 def getDir():
@@ -153,3 +154,13 @@ if __name__ == '__main__':
         getVehicles(savefile)
 
         sleep(1)
+
+
+server = Flask(__name__)
+
+@server.route('/')
+def index():
+    return 'index.html'
+
+if __name__ == '__main__':
+    server.run(host='0.0.0.0.', port=8095)
