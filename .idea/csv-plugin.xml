@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/OBA_DATABASE/2022-07/05-TRIPS.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/OBA_DATABASE/2022-07/06-PREDICTIONS.csv">
           <value>
             <Attribute>
@@ -32,6 +39,27 @@
           </value>
         </entry>
         <entry key="/OBA_DATABASE/2022-07/06-TRIPS.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/OBA_DATABASE/2022-07/07-PREDICTIONS.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/OBA_DATABASE/2022-07/07-TRACCAR.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/OBA_DATABASE/2022-07/07-TRIPS.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

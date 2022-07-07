@@ -5,8 +5,6 @@ import asyncio
 from datetime import date, datetime
 from time import gmtime, strftime, sleep
 import pandas as pd
-from flask import Flask 
-
 
 def getDir():
     savefile = "./OBA_DATABASE/" + str(date.today().strftime("%Y-%m")) + '/'
@@ -49,7 +47,7 @@ def getLocs(dir):
 def getRoutes(dir):
     req = requests.get(
         'http://167.172.12.82:8080/api/v1/key/f78a2e9a/agency/1/command/gtfs-rt/vehiclePositions?format=human'
-       )
+    )
     data = req.text
     data = data.split('\n')
 
@@ -121,8 +119,6 @@ def getVehicles(dir):
                     stopsInEntity += 1
                 x += 1
 
-
-
     temp = None
     filedir = os.path.join(dir, str(date.today().strftime("%d")) + '-PREDICTIONS.csv')
 
@@ -154,13 +150,3 @@ if __name__ == '__main__':
         getVehicles(savefile)
 
         sleep(1)
-
-
-server = Flask(__name__)
-
-@server.route('/')
-def index():
-    return 'index.html'
-
-if __name__ == '__main__':
-    server.run(host='0.0.0.0.', port=8095)
