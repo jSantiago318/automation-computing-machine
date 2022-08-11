@@ -5,6 +5,16 @@ import asyncio
 from datetime import date, datetime
 from time import gmtime, strftime, sleep
 import pandas as pd
+from flask import Flask
+import mysql.connector
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
 
 def getDir():
     savefile = "./OBA_DATABASE/" + str(date.today().strftime("%Y-%m")) + '/'
@@ -12,7 +22,7 @@ def getDir():
     if os.path.isdir("./OBA_DATABASE"):
         print('./OBA_DATABASE already exists')
     else:
-        os.makedirs("./OBA_DATABASE")
+        os.makedirs("../../OBA_DATABASE")
         os.makedirs("./OBA_DATABASE/" + str(date.today().strftime("%Y-%m")) + '/')
         sleep(2)
     return savefile
@@ -139,14 +149,24 @@ def checkTime():
         return False
 
 
+def dbCnct():
+    mydb = mysql.connector.connect(host='localhost', port=3306, user='root', passwd='root', database='traccar')
+    cur = mydb.cursor()
+    cur.execute("show databases")
+
+    for i in cur:
+        print(i)
+
 if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5050)
 
-    savefile = getDir()
-    isRunning = checkTime()
-
-    while not isRunning:
-        getLocs(savefile)
-        getRoutes(savefile)
-        getVehicles(savefile)
-
-        sleep(1)
+    dbCnct()
+    # savefile = getDir()
+    # isRunning = checkTime()
+    #
+    # while not isRunning:
+    #     getLocs(savefile)
+    #     getRoutes(savefile)
+    #     getVehicles(savefile)
+    #
+    #     sleep(1)
